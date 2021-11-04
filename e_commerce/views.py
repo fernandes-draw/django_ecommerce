@@ -3,4 +3,24 @@ from django.shortcuts import render
 
 
 def home_page(request):
-    return render(request, "home_page.html", {})
+    context = {
+        "title": "Página Principal",
+        "content": "Bem vindo a página principal"
+    }
+    return render(request, "home_page.html", context)
+
+
+def about_page(request):
+    context = {
+        "title": "Página Sobre",
+        "content": "Bem vindo a página sobre"
+    }
+    return render(request, "about-page.html", context)
+
+
+def contact_page(request):
+    context = {
+        "title": "Página de Contato",
+        "content": "Bem vindo a página de contato"
+    }
+    return render(request, "contact_page.html", context)
